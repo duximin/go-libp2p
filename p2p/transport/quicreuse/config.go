@@ -17,4 +17,6 @@ var quicConfig = &quic.Config{
 	EnableDatagrams: true,
 	// Required for WebTransport
 	EnableStreamResetPartialDelivery: true,
+	InitialStreamReceiveWindow:       5 * (1 << 20),
+	InitialConnectionReceiveWindow:   10 * (1 << 20),
 }
